@@ -5,15 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Health_Advice_Group"
         mc:Ignorable="d"
-        Title="Health Advice Group" Height="350" Width="350">
+        Title="Health Advice Group" Height="450" Width="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="150">
-            <Label Name="lblEmail" Content="email" HorizontalAlignment="Left"/>
-            <TextBox x:Name="txtEmail" Width="150" MaxWidth="150"/>
-            <Label Name="lblPassword" Content="password" HorizontalAlignment="Left"/>
-            <PasswordBox Name="passwordbox" Width="150" MaxWidth="150"/>
-            <Button Name="btnLogin" Content="Log In" Width="75" Margin="5"/>
-            <Button Name="btnRegister" Content="Register" Width="75" Margin="5"/>
-        </StackPanel>
+
     </Grid>
 </Window>
