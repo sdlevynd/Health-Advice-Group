@@ -29,7 +29,7 @@ namespace Health_Advice_Group
             //testing ignore feature
             InitializeComponent();
             requestCurrent = baseRequestCurrent.Replace("LOCATION", "Leeds");
-            requestCurrent = requestCurrent.Replace("APIKEY", API.Key);
+            requestCurrent = requestCurrent.Replace("APIKEY", Passwords.Key);
             showJSON(requestCurrent);
         }
 
@@ -37,7 +37,7 @@ namespace Health_Advice_Group
         {
             requestCurrent = baseRequestCurrent.Replace("LOCATION",txtLocation.Text);
             MessageBox.Show(requestCurrent);
-            requestCurrent = requestCurrent.Replace("APIKEY", API.Key);
+            requestCurrent = requestCurrent.Replace("APIKEY", Passwords.Key);
             showJSON(requestCurrent);
         }
         private void showJSON(string request)
