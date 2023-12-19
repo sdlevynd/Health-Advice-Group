@@ -17,7 +17,7 @@ namespace Health_Advice_Group
         private static MySqlConnection conn;
         public static void connect()
         {
-            conn = new MySqlConnection(connStr);
+            conn = new MySqlConnection(connStr+Passwords.getPass());
         }
         public static MySqlConnection getConnection()
         {
