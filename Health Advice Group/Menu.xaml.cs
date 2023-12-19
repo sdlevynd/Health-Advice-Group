@@ -19,9 +19,13 @@ namespace Health_Advice_Group
     /// </summary>
     public partial class Menu : Window
     {
+        string requestCurrent = "http://api.weatherapi.com/v1/current.json?key=APIKEY&q=Leeds&aqi=no";
         public Menu()
         {
             InitializeComponent();
+            MessageBox.Show(requestCurrent);
+            requestCurrent = requestCurrent.Replace("APIKEY", API.Key);
+            MessageBox.Show(requestCurrent);
         }
     }
 }

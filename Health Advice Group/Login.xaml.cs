@@ -26,7 +26,6 @@ namespace Health_Advice_Group
             InitializeComponent();
             data.connect();
         }
-
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             data.open();
