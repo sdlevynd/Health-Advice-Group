@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Health_Advice_Group"
         mc:Ignorable="d"
-        Title="Health Advice Group" Height="450" Width="800">
+        Title="Health Advice Group" Height="350" Width="350">
     <Grid>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/cloudBackground.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Name="lblName" Content="LOGO" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="64"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Name="lblMessage" Content="" Foreground="Red" HorizontalAlignment="Center" FontSize="20"/>
+            <WrapPanel Margin="5">
+                <Label Name="lblEmail" Content="Email Address" Width="80"/>
+                <TextBox Name="txtEmail" Width="120" MaxWidth="120"/>
+            </WrapPanel>
+            <WrapPanel Margin="5">
+                <Label Name="lblPassword" Content="Password" Width="80"/>
+                <PasswordBox Name="pbxPassword" Width="120" MaxWidth="120"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Button Name="btnLogin" Content="Log In" Width="100" Margin="5" Click="btnLogin_Click"/>
+                <Button Name="btnRegister" Content="Register" Width="100" Margin="5" Click="btnRegister_Click"/>
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>
