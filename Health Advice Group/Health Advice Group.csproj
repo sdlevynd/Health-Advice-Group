@@ -11,6 +11,8 @@
   <ItemGroup>
     <None Remove="Images\cloudBackground.png" />
     <None Remove="Images\clouds.png" />
+    <None Remove="Images\durer_grass.png" />
+    <None Remove="Images\landscape.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +22,8 @@
   <ItemGroup>
     <Resource Include="Images\cloudBackground.png" />
     <Resource Include="Images\clouds.png" />
+    <Resource Include="Images\durer_grass.png" />
+    <Resource Include="Images\landscape.png" />
   </ItemGroup>
 
 </Project>

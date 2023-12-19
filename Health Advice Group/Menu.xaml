@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="450">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/landscape.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         <StackPanel VerticalAlignment="Center">
             <TextBox Name="txtLocation" Width="100" MaxWidth="100"/>
             <Button Name="btnUpdateLocation" Content="Update Location" Width="100" Click="btnUpdateLocation_Click"/>

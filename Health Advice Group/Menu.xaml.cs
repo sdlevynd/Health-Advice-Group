@@ -23,29 +23,39 @@ namespace Health_Advice_Group
     public partial class Menu : Window
     {
         string baseRequestCurrent = "http://api.weatherapi.com/v1/current.json?key=APIKEY&q=LOCATION&aqi=no";
-        string requestCurrent;
         public Menu()
         {
+            string test = "test";
+            test = test[0].ToString().ToUpper() + test.Substring(1);
+            MessageBox.Show(test);
             //testing ignore feature
             InitializeComponent();
-            requestCurrent = baseRequestCurrent.Replace("LOCATION", "Leeds");
+            string requestCurrent = baseRequestCurrent.Replace("LOCATION", "Leeds");
             requestCurrent = requestCurrent.Replace("APIKEY", Passwords.Key);
             showJSON(requestCurrent);
         }
 
         private void btnUpdateLocation_Click(object sender, RoutedEventArgs e)
         {
-            requestCurrent = baseRequestCurrent.Replace("LOCATION",txtLocation.Text);
+            string requestCurrent = baseRequestCurrent.Replace("LOCATION",txtLocation.Text);
             MessageBox.Show(requestCurrent);
             requestCurrent = requestCurrent.Replace("APIKEY", Passwords.Key);
             showJSON(requestCurrent);
         }
         private void showJSON(string request)
         {
-            HttpClient client = new HttpClient();
-            var response = client.GetStringAsync(request).Result;
-            var jsonObject = JsonNode.Parse(response);
-            output.Text = jsonObject.ToString();
+            try
+            {
+                HttpClient client = new HttpClient();
+                var response = client.GetStringAsync(request).Result;
+                var jsonObject = JsonNode.Parse(response);
+                output.Text = jsonObject.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

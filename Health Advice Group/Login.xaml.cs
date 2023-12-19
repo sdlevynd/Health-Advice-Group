@@ -29,7 +29,10 @@ namespace Health_Advice_Group
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             data.open();
-            string loginUser = "SELECT count(email) FROM users WHERE email = @paramEmail AND password = SHA2(@paramPassword,256);";
+            string loginUser = "SELECT count(email)" +
+                " FROM users" +
+                " WHERE email = @paramEmail" +
+                " AND password = SHA2(@paramPassword,256);";
             MySqlCommand cmd = new MySqlCommand(loginUser, data.getConnection());
             cmd.Parameters.AddWithValue("@paramEmail", txtEmail.Text);
             cmd.Parameters.AddWithValue("@paramPassword", pbxPassword.Password);
@@ -51,13 +54,16 @@ namespace Health_Advice_Group
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             data.open();
-            string checkUser = "SELECT email FROM users WHERE email = @paramEmail";
+            string checkUser = "SELECT email" +
+                " FROM users" +
+                " WHERE email = @paramEmail";
             MySqlCommand cmd = new MySqlCommand(checkUser, data.getConnection());
             cmd.Parameters.AddWithValue("@paramEmail",txtEmail.Text);
             var result = cmd.ExecuteScalar();
             if (result == null)
             {
-                string registerUser = "INSERT INTO users (email, password) VALUES (@paramEmail, SHA2(@paramPassword,256));";
+                string registerUser = "INSERT INTO users (email, password)" +
+                    " VALUES (@paramEmail, SHA2(@paramPassword,256));";
                 cmd = new MySqlCommand(registerUser, data.getConnection());
                 cmd.Parameters.AddWithValue("@paramEmail", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@paramPassword", pbxPassword.Password);
