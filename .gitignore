@@ -365,3 +365,4 @@ FodyWeavers.xsd
 # API Key
 API.cs
 /Health Advice Group/TestIgnore.cs
+/Health Advice Group/Passwords.cs
