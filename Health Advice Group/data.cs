@@ -13,7 +13,7 @@ namespace Health_Advice_Group
                  "user=tl_sly;" +
                  "database=tl_sly_hag;" +
                  "port=3306;" +
-                 "password=g7Wj1FQSBhB2GZu3wYF3JvynlCCirT9Z";
+                 "password=";
         private static MySqlConnection conn;
         public static void connect()
         {

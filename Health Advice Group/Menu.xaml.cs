@@ -26,6 +26,7 @@ namespace Health_Advice_Group
         string requestCurrent;
         public Menu()
         {
+            //testing ignore feature
             InitializeComponent();
             requestCurrent = baseRequestCurrent.Replace("LOCATION", "Leeds");
             requestCurrent = requestCurrent.Replace("APIKEY", API.Key);
