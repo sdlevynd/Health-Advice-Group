@@ -23,9 +23,7 @@ namespace Health_Advice_Group
         public Menu()
         {
             InitializeComponent();
-            MessageBox.Show(requestCurrent);
             requestCurrent = requestCurrent.Replace("APIKEY", API.Key);
-            MessageBox.Show(requestCurrent);
         }
     }
 }
